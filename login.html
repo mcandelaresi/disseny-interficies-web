@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicia la sessió | La guia de la RiftPedia</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <a class="salt-contingut" href="#contingut-principal">Salta al contingut principal</a>
+    <header class="capcalera">
+        <a class="logotip" href="index.html">
+            <img src="img/logotip.svg" alt="La guia de Riftpedia – Inici">
+        </a>
+        <nav class="navegacio" aria-label="Navegació principal">
+            <a href="index.html">Inici</a>
+            <a href="index.html#campions">Campions</a>
+            <a href="index.html#runes">Runes</a>
+            <a href="index.html#aspectes">Aspectes</a>
+            <a href="index.html#objectes">Objectes</a>
+        </nav>
+        <a class="boto boto-acces" href="login.html" aria-current="page">Accés / Registre</a>
+    </header>
+    <main class="contingut-formulari" id="contingut-principal" tabindex="-1">
+        
+        <div class="panell-imatge">
+            <img src="img/arcane.png" alt="">
+        </div>
+        <section class="panell-formulari" aria-labelledby="titol-formulari">
+            <header>
+                <p class="etiqueta">LA GUIA DE LA RIFTPEDIA</p>
+                <h1 id="titol-formulari">Inicia la sessió</h1>
+            </header>
+            <p class="avis">Formulari de demostració: no envia les dades dels camps, no inicia sessions ni crea comptes. Si els camps són vàlids, tornaràs a l’inici.</p>
+            <p class="avis" id="camps-obligatoris">Tots els camps són obligatoris. No hi introdueixis dades reals.</p>
+            <form aria-describedby="camps-obligatoris" id="formulari-acces" action="index.html" method="get">
+                <p class="camp">
+                    <label for="usuari">Usuari</label>
+                    <input type="text" id="usuari" required minlength="3" maxlength="30" autocomplete="username" aria-describedby="ajuda-usuari">
+                    <small id="ajuda-usuari">Entre 3 i 30 caràcters.</small>
+                </p>
+                <p class="camp">
+                    <label for="contrasenya">Contrasenya</label>
+                    <input type="password" id="contrasenya" required minlength="8" autocomplete="current-password" aria-describedby="ajuda-contrasenya">
+                    <small id="ajuda-contrasenya">Mínim 8 caràcters.</small>
+                </p>
+                <button type="submit" class="boto boto-formulari">Entra</button>
+            </form>
+            <p class="enllac-formulari">Encara no tens un compte? <a href="register.html">Registra’t</a>.</p>
+        </section>
+    </main>
+    <footer class="peu-pagina">
+        <p>La guia de la RiftPedia · Projecte de Mijael Candelaresi</p>
+        <p>Web de fans educativa, sense afiliació amb Riot Games.</p>
+    </footer>
+</body>
+</html>

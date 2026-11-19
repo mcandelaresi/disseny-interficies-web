@@ -1,0 +1,280 @@
+/* Colors principals: blau fosc #0a1428, turquesa #0bc4e2 i daurat #c8aa6e. */
+/* El navegador utilitza Inter si està instal·lada; si no, Arial. */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #0a1428;
+    color: #ffffff;
+    font-family: Inter, Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex-grow: 1;
+}
+a {
+    color: #0bc4e2;
+}
+a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+}
+.capcalera {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 20px 4%;
+    background-color: #111111;
+    border-bottom: 1px solid #c8aa6e;
+}
+.logotip img {
+    display: block;
+    width: 120px;
+}
+.navegacio {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.navegacio a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    min-height: 24px;
+}
+.navegacio a:hover, .navegacio a[aria-current="page"] {
+    color: #c8aa6e;
+    text-decoration: underline;
+}
+.boto {
+    display: inline-block;
+    padding: 12px 22px;
+    border: 2px solid #c8aa6e;
+    border-radius: 8px;
+    background-color: #0bc4e2;
+    color: #0a1428;
+    font: inherit;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+.boto:hover {
+    background-color: #63e4f4;
+}
+h1, h2 {
+    line-height: 1.2;
+}
+h1 {
+    margin-top: 0;
+    font-size: 2rem;
+}
+h2 {
+    color: #c8aa6e;
+}
+.contingut-principal {
+    /* Evita que el text ampliat surti de les targetes. */
+    overflow-wrap: break-word;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px;
+}
+.introduccio {
+    color: #cbd5e1;
+    margin-bottom: 30px;
+}
+.seccions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 22px;
+}
+.targeta {
+    min-width: 0;
+    background-color: #1e354a;
+    border: 1px solid #c8aa6e;
+}
+.imatge-targeta {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.text-targeta {
+    padding: 18px;
+}
+.text-targeta h2 {
+    margin-top: 0;
+    font-size: 1.375rem;
+}
+.text-targeta p {
+    margin-bottom: 0;
+}
+.explicacio {
+    margin-top: 30px;
+    padding: 30px;
+    border: 1px solid #c8aa6e;
+    background-color: #15283f;
+}
+.etiqueta {
+    color: #c8aa6e;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+.accio-principal {
+    margin: 26px 0 0;
+    text-align: center;
+}
+.boto-daurat {
+    background-color: #c8aa6e;
+}
+.boto-daurat:hover {
+    background-color: #e3c78d;
+}
+.boto:active {
+    background-color: #ffffff;
+}
+/* Les dues columnes de les pàgines d'accés i registre. */
+.contingut-formulari {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+.panell-imatge, .panell-formulari {
+    min-width: 0;
+    background-color: #1e354a;
+    border: 1px solid #c8aa6e;
+}
+.panell-imatge {
+    display: flex;
+    width: 52%;
+}
+.panell-imatge img {
+    width: 100%;
+    object-fit: cover;
+}
+.panell-formulari {
+    width: 48%;
+    padding: 32px;
+}
+.panell-formulari h1 {
+    font-size: 1.75rem;
+}
+.avis, small {
+    color: #d5dfe8;
+    font-size: 0.8125rem;
+}
+.camp {
+    margin: 0 0 16px;
+}
+.camp label, .camp small {
+    display: block;
+    margin-bottom: 5px;
+}
+.camp input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #c8aa6e;
+    border-radius: 3px;
+    background-color: #f4f6f8;
+    color: #0a1428;
+    font: inherit;
+}
+.camp small {
+    margin-top: 4px;
+}
+.boto-formulari {
+    width: 100%;
+    margin-top: 8px;
+}
+.enllac-formulari {
+    font-size: 0.875rem;
+}
+.peu-pagina {
+    padding: 16px;
+    background-color: #111111;
+    border-top: 1px solid #c8aa6e;
+    text-align: center;
+    font-size: 0.8125rem;
+    color: #cbd5e1;
+}
+.peu-pagina p {
+    margin: 4px 0;
+}
+/* Accessibilitat: focus i estat de la navegació. */
+main:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: -4px;
+}
+.navegacio a:focus-visible,
+.boto[aria-current="page"] {
+    text-decoration: underline;
+}
+.enllac-formulari a:visited {
+    color: #c8aa6e;
+}
+
+/* Enllaç per saltar al contingut principal (visible amb el focus). */
+.salt-contingut {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.salt-contingut:focus {
+    position: static;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background-color: #0bc4e2;
+    color: #0a1428;
+    font-weight: bold;
+}
+
+/* En mòbils, els blocs es col·loquen un sota l'altre. */
+@media (max-width: 800px) {
+    .capcalera {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+    .navegacio {
+        flex: auto;
+        width: 100%;
+        gap: 14px;
+    }
+    .seccions {
+        grid-template-columns: 1fr 1fr;
+    }
+    .contingut-formulari {
+        flex-direction: column;
+    }
+    .panell-imatge, .panell-formulari {
+        width: 100%;
+    }
+    .panell-imatge img {
+        height: 260px;
+    }
+}
+@media (max-width: 480px) {
+    .seccions {
+        grid-template-columns: 1fr;
+    }
+    .panell-formulari, .explicacio {
+        padding: 22px;
+    }
+}
+
